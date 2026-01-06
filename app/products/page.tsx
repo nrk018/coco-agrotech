@@ -27,7 +27,6 @@ export default function Products() {
           <div className="product-detail-container">
             {/* Left Column - Text Content */}
             <div className="product-detail-left">
-
               {/* Text Sections */}
               <div className="product-detail-text">
                 <h2 className="product-detail-heading">COCO PEAT</h2>
@@ -65,7 +64,6 @@ export default function Products() {
                 </ul>
               </div>
             </div>
-
           </div>
         </main>
       </PageTransition>

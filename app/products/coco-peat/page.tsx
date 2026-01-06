@@ -65,7 +65,6 @@ export default function CocoPeatPage() {
               </ul>
             </div>
           </div>
-
         </div>
       </main>
       </PageTransition>

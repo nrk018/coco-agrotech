@@ -32,3 +32,8 @@ export default function ProductImageGallery({ images, className }: ProductImageG
   )
 }
 
+
+
+
+
+
