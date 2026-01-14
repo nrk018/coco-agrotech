@@ -39,68 +39,68 @@ export default function Header() {
   }, [isHomePage])
 
   return (
-    <header 
+      <header 
       className={`simple-navbar ${isHomePage ? (isScrolled ? 'scrolled' : '') : 'white-navbar'}`}
-      role="banner"
-    >
+        role="banner"
+      >
       <div className="simple-navbar-container">
         <div className="simple-navbar-spacer"></div>
         
         <nav className="simple-navbar-logo">
           <Link href="/" className="simple-logo-link">
             <span className="simple-logo">CocoAgroTech</span>
-          </Link>
-        </nav>
-        
+                </Link>
+          </nav>
+          
         <nav className="simple-navbar-nav">
           <ul className="simple-nav-list">
-            <li>
+              <li>
               <Link 
                 href="/products" 
                 className={`simple-nav-link ${pathname.startsWith('/products') ? 'active' : ''}`}
               >
                 PRODUCTS
               </Link>
-            </li>
-            <li>
+              </li>
+              <li>
               <Link 
                 href="/about" 
                 className={`simple-nav-link ${pathname === '/about' ? 'active' : ''}`}
               >
                 ABOUT
               </Link>
-            </li>
-            <li>
+              </li>
+              <li>
               <Link 
                 href="/gallery" 
                 className={`simple-nav-link ${pathname === '/gallery' ? 'active' : ''}`}
               >
                 GALLERY
               </Link>
-            </li>
-            <li>
+              </li>
+              <li>
               <Link 
                 href="/contact" 
                 className={`simple-nav-link ${pathname === '/contact' ? 'active' : ''}`}
               >
                 CONTACT
               </Link>
-            </li>
-          </ul>
-        </nav>
+              </li>
+            </ul>
+          </nav>
 
         <button
           className="simple-request-btn" 
-          aria-label="Request Quote"
+            aria-label="Request Quote"
           onClick={() => {
             window.dispatchEvent(new CustomEvent('open-enquiry-popup'))
-          }}
-        >
+            }}
+          >
           REQUEST QUOTE
         </button>
         
         <div className="simple-navbar-spacer"></div>
-      </div>
-    </header>
+        </div>
+      </header>
   )
 }

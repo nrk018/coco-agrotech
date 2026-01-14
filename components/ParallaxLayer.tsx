@@ -24,20 +24,20 @@ export default function ParallaxLayer({
     const handleScroll = () => {
       if (!ticking && ref.current) {
         window.requestAnimationFrame(() => {
-          if (ref.current) {
-            const rect = ref.current.getBoundingClientRect()
-            const scrolled = window.pageYOffset
-            const elementTop = rect.top + scrolled
-            const windowHeight = window.innerHeight
+      if (ref.current) {
+        const rect = ref.current.getBoundingClientRect()
+        const scrolled = window.pageYOffset
+        const elementTop = rect.top + scrolled
+        const windowHeight = window.innerHeight
             
             // Only process if element is in or near viewport
             if (rect.bottom < -windowHeight || rect.top > windowHeight * 2) {
               ticking = false
               return
             }
-            
-            // Calculate parallax offset based on scroll position
-            const yPos = -(scrolled - elementTop + windowHeight) * speed
+        
+        // Calculate parallax offset based on scroll position
+        const yPos = -(scrolled - elementTop + windowHeight) * speed
             setTransform(`translate3d(0, ${yPos}px, 0)`)
           }
           ticking = false

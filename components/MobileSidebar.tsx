@@ -65,11 +65,11 @@ export default function MobileSidebar() {
               const isActive = (link.href === '/' && pathname === '/') || 
                               (link.href !== '/' && pathname?.startsWith(link.href))
               return (
-                <SidebarLink
-                  key={idx}
-                  link={link}
+              <SidebarLink
+                key={idx}
+                link={link}
                   className={`mobile-sidebar-link ${isActive ? 'active' : ''}`}
-                />
+              />
               )
             })}
           </nav>
